@@ -1,0 +1,10 @@
+title       = "bbc"
+baseURL     = "https://bbc-cli.tamnd.com/"
+description = "Read BBC News stories by section"
+contentDir  = "content"
+outputDir   = "public"
+theme       = "tago-doks"
+syntaxHighlight = "true"
+
+[params]
+github = "https://github.com/tamnd/bbc-cli"
