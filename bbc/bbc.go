@@ -122,6 +122,14 @@ func KnownSections() []Section {
 	return out
 }
 
+// Host is the BBC feed host for URI domain registration.
+const Host = "feeds.bbci.co.uk"
+
+// News fetches the top BBC News headlines (equivalent to Feed("/news/rss.xml", limit)).
+func (c *Client) News(ctx context.Context, limit int) ([]Article, error) {
+	return c.Feed(ctx, "/news/rss.xml", limit)
+}
+
 // ─── HTTP internals ───────────────────────────────────────────────────────────
 
 func (c *Client) get(ctx context.Context, rawURL string) ([]byte, error) {
